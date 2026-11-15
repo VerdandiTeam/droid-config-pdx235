@@ -1,0 +1,15 @@
+[Unit]
+Description=Mount for /vendor/etc/wifi/WCNSS_qcom_cfg.ini
+Before=local-fs.target systemd-modules-load.service
+
+[Mount]
+What=/etc/WCNSS_qcom_cfg.ini
+Where=/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+Type=none
+Options=bind
+# Default is 90 which makes mount period too long in case of
+# errors so drop it down a notch.
+TimeoutSec=10
+
+[Install]
+WantedBy=local-fs.target
