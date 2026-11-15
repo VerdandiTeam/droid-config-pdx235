@@ -1,0 +1,15 @@
+[Unit]
+Description=Refresh QTI display composer after encryption unlock
+After=cryptsetup.target systemd-user-sessions.service graphical.target
+ConditionPathIsDirectory=/home/defaultuser
+ConditionPathExists=/etc/crypttab
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'setprop ctl.restart vendor.qti.hardware.display.composer || true'
+ExecStartPost=/bin/sleep 1
+ExecStartPost=/bin/su -s /bin/sh defaultuser -c 'XDG_RUNTIME_DIR=/run/user/100000 systemctl --user --no-block restart lipstick'
+SuccessExitStatus=0 6 SIGABRT
+
+[Install]
+WantedBy=graphical.target

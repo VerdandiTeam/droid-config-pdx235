@@ -88,7 +88,7 @@ Obsoletes: jolla-devicelock-daemon-encsfa
 Obsoletes: jolla-devicelock-plugin-encsfa
 
 # Enable home encryption
-#Requires: sailfish-device-encryption
+Requires: sailfish-device-encryption
 
 # For GPS
 Requires: geoclue-provider-hybris
@@ -105,7 +105,7 @@ Requires: nfcd-binder-plugin
 #Requires: nfcd-pn54x-plugin
 
 # Splash screen
-#Requires: yamuisplash
+Requires: yamuisplash
 
 %description -n patterns-sailfish-device-adaptation-xqdc72
 Pattern with packages for xqdc72 HW Adaptation
