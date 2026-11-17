@@ -2,3 +2,6 @@
 boundaryWidth=60
 boundaryHeight=60
 pressDelay=800
+
+[desktop/jolla]
+reboot_action_enabled=true
