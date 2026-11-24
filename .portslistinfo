@@ -1,6 +1,6 @@
 AUTHOR=sharks
 EMAIL=sharks.dev.000@gmail.com
-BROKEN=...nothing?
+BROKEN=
 FEATURES=VoLTE,Cameras,Fingerprint,dual-sim,Bluetooth
 DEVICE=Xperia 10 V
 URL=https://forum.sailfishos.org/t/lineage-based-port-for-xperia-10-v-zambezi/31348/1
