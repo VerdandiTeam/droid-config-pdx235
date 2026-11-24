@@ -42,6 +42,7 @@ Requires: mapplauncherd-booster-silica-qt5-media
 
 ## VerdandiTeam stuff
 Recommends: verdandiupdater-sfos
+Recommends: verdanditeam-branding
 
 # Remove busybox
 Requires: gnu-bash
